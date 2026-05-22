@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Registry | Ikuu Boys' High School</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #0c2340;
+            --accent-gold: #ffc72c;
+            --text-dark: #222222;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo-text h1 { font-size: 1.4rem; }
+        header .logo-text p { font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase; font-weight: bold; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover { color: var(--accent-gold); }
+
+        .page-header-ribbon {
+            background-color: #f4f6f9;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 35px 2rem;
+        }
+
+        .page-header-ribbon h1 { color: var(--primary-blue); font-size: 1.8rem; }
+
+        /* Split Screen Display Configuration */
+        .container {
+            max-width: 1140px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .info-panel h2, .form-panel h2 {
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .info-panel h2::after, .form-panel h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-gold);
+        }
+
+        .contact-channel {
+            margin-bottom: 22px;
+        }
+
+        .contact-channel h3 {
+            font-size: 1.05rem;
+            color: #475569;
+            margin-bottom: 4px;
+        }
+
+        .contact-channel p {
+            color: #1e293b;
+            font-size: 0.95rem;
+        }
+
+        /* Direct form handling interface element layout */
+        .form-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #475569;
+            margin-bottom: 6px;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(12, 35, 64, 0.1);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover { background-color: #14355e; }
+
+        @media (max-width: 820px) {
+            .container { grid-template-columns: 1fr; gap: 40px; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            nav a { margin: 0 10px; }
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <div class="logo-text">
+                <h1>IKUU BOYS' HIGH SCHOOL</h1>
+                <p>National School</p>
+            </div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tenders.html">Procurement/PPIP</a>
+            <a href="contact.html" style="color: var(--accent-gold);">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="page-header-ribbon">
+        <h1>Connect With Our Institutional Registry</h1>
+        <p>Home / General Admissions, Procurement & Registrar Office Contact</p>
+    </div>
+
+    <div class="container">
+        
+        <!-- Left Side Panel Content: Structural Contacts -->
+        <div class="info-panel">
+            <h2>Official Channels</h2>
+            
+            <div class="contact-channel">
+                <h3>Postal Mailbox</h3>
+                <p>The Principal,<br>Ikuu Boys' High School<br>P.O. Box 40 – 60400<br>Chuka, Kenya</p>
+            </div>
+
+            <div class="contact-channel">
+                <h3>Direct Registrar Phone Extensions</h3>
+                <p>📞 0739 902 196 (Principal Office Registry)</p>
+                <p>📞 0715 054 398 (Bursar & Admissions Office)</p>
+            </div>
+
+            <div class="contact-channel">
+                <h3>Electronic Mail Routing</h3>
+                <p>ikuuboysh@yahoo.co.uk</p>
+            </div>
+
+            <div class="contact-channel">
+                <h3>Geographical Positioning Map</h3>
+                <p>Located in Tharaka Nithi County, Chuka Sub-County. Accessible 4 Kilometers South of Chuka Town center, positioned slightly off the primary Embu–Meru Highway link road.</p>
+            </div>
+        </div>
+
+        <!-- Right Side Panel Content: Interception Messaging Desk -->
+        <div class="form-panel">
+            <h2>Submit Digital Enquiry</h2>
+            <form action="#" method="POST" onsubmit="alert('Thank you for contacting Ikuu Boys High School. Your message has been successfully logged and queued for administrative review.'); return false;">
+                
+                <div class="form-group">
+                    <label for="fullname">Full Representative Name</label>
+                    <input type="text" id="fullname" placeholder="e.g. David Mwangi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailaddress">Active Email Address</label>
+                    <input type="email" id="emailaddress" placeholder="name@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Inquiry Department</label>
+                    <style>select { background: white; }</style>
+                    <select id="category" required>
+                        <option value="">-- Choose Category --</option>
+                        <option value="admissions">Form 1 / Transfer Admissions</option>
+                        <option value="tenders">Procurement & PPIP Bids</option>
+                        <option value="general">General Institutional Queries</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Detailed Message Text</label>
+                    <textarea id="message" rows="5" placeholder="Specify your information request cleanly..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ikuu Boys' High School. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
