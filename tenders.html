@@ -3,66 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procurement & Tenders | Ikuu Boys' High School</title>
+    <title>Procurement & PPIP Notices | Ikuu Boys' High School</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-        :root { --blue: #0c2340; --gold: #ffc72c; }
-        
-        /* Identical Shared Navigation */
-        header { background: var(--blue); color: white; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        nav a:hover { color: var(--gold); }
-        .logo p { color: var(--gold); font-size: 0.8rem; text-transform: uppercase; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        /* INNER PAGE ONLY: Thin, Professional Page Title Ribbon */
+        :root {
+            --primary-blue: #0c2340;
+            --accent-gold: #ffc72c;
+            --text-dark: #222222;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.7;
+            background-color: #ffffff;
+        }
+
+        /* Top Meta Information Ribbon */
+        .top-info-bar {
+            background-color: #061224;
+            color: white;
+            font-size: 0.85rem;
+            padding: 8px 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo-text h1 { font-size: 1.4rem; }
+        header .logo-text p { font-size: 0.8rem; color: var(--accent-gold); text-transform: uppercase; font-weight: bold; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover { color: var(--accent-gold); }
+
+        /* INNER PAGE RIBBON: Clean, lightweight professional identifier */
         .page-header-ribbon {
             background-color: #f4f6f9;
             border-bottom: 1px solid #e2e8f0;
-            padding: 30px 2rem;
+            padding: 35px 2rem;
         }
-        .page-header-ribbon h1 { color: var(--blue); font-size: 1.8rem; }
-        .page-header-ribbon p { font-size: 0.9rem; color: #666; margin-top: 5px; }
 
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        .tender-card { background: #fff; border: 1px solid #e2e8f0; padding: 20px; border-radius: 6px; margin-bottom: 15px; border-left: 5px solid var(--gold); }
-        footer { background: var(--blue); color: white; text-align: center; padding: 20px; margin-top: 100px; border-top: 4px solid var(--gold); }
+        .page-header-ribbon h1 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+        }
+
+        .page-header-ribbon p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 6px;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+        }
+
+        /* Data driven component cards */
+        .tender-card {
+            background: #fdfdfd;
+            border: 1px solid #e2e8f0;
+            padding: 22px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .tender-card.gold-edge { border-left: 5px solid var(--accent-gold); }
+        .tender-card.blue-edge { border-left: 5px solid var(--primary-blue); }
+
+        .tag {
+            font-size: 0.75rem;
+            background: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #4a5568;
+            text-transform: uppercase;
+        }
+
+        .notice-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #eef2f7;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .portal-btn {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .portal-btn:hover { background-color: #15345c; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            nav a { margin: 0 10px; }
+            .notice-box { flex-direction: column; text-align: center; }
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--accent-gold);
+        }
     </style>
 </head>
 <body>
 
+    <div class="top-info-bar">
+        <div>📍 Chuka, Tharaka Nithi County</div>
+        <div><strong>KNEC Code:</strong> 19300010</div>
+    </div>
+
     <header>
-        <div class="logo">
-            <h2>IKUU BOYS' HIGH SCHOOL</h2>
-            <p>National School</p>
+        <div class="logo-area">
+            <div class="logo-text">
+                <h1>IKUU BOYS' HIGH SCHOOL</h1>
+                <p>National School</p>
+            </div>
         </div>
         <nav>
             <a href="index.html">Home</a>
-            <a href="tenders.html" style="color: var(--gold);">Procurement/PPIP</a>
+            <a href="tenders.html" style="color: var(--accent-gold);">Procurement/PPIP</a>
+            <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
-    <!-- Different Top Layout: Clean, quick text identifier instead of a giant photo -->
     <div class="page-header-ribbon">
-        <h1>Procurement Opportunities & Public Notices</h1>
-        <p>Home / Tenders & Compliance Portal</p>
+        <h1>Procurement Opportunities & Compliance Framework</h1>
+        <p>Home / Public Procurement Information Portal Compliance logs</p>
     </div>
 
     <div class="container">
-        <p style="margin-bottom: 25px; color: #444;">In strict alignment with the Public Procurement Regulatory Authority (PPRA) and the PPIP framework, all open structural tenders for Ikuu Boys are updated below:</p>
         
-        <div class="tender-card">
-            <span style="font-size: 0.8rem; font-weight: bold; color: #718096;">REF: IBHS/DORM/LW/PHS1/2025</span>
-            <h3 style="color: var(--blue); margin: 5px 0;">Proposed Construction of Dormitory (Left Wing) — Phase 1</h3>
-            <p style="color: #555; font-size: 0.95rem; margin-top: 5px;">Sealed bids are accepted at the administration block tender box until the official closing date specified in the portal documents.</p>
-        </div>
+        <section class="section">
+            <p>In structural configuration with the Public Procurement Regulatory Authority (PPRA) guidelines, Ikuu Boys' High School invites certified, transparent corporate contractors to file tenders for key development projects.</p>
 
-        <div style="background: #eef2f7; padding: 15px; border-radius: 4px; font-size: 0.9rem; margin-top: 20px;">
-            <strong>Note to Contractors:</strong> Download explicit, blank BOQs (Bills of Quantities) straight from the national <a href="https://www.tenders.go.ke" target="_blank" style="color: var(--blue); font-weight: bold;">PPIP Portal (tenders.go.ke)</a>.
-        </div>
+            <!-- Tender 1 -->
+            <div class="tender-card gold-edge">
+                <span class="tag">Works / Structural</span>
+                <h3 style="margin: 10px 0 5px 0; color: var(--primary-blue);">Proposed Construction of Dormitory (Left Wing) — Phase 1</h3>
+                <p style="font-size: 0.95rem; color: #444; margin-bottom: 5px;"><strong>Tender Code:</strong> IBHS/DORM/LW/PHS1/2025 | <strong>Required Bid Security:</strong> Ksh 200,000.00</p>
+                <p style="font-size: 0.9rem; color: #666;">Opening Location: Institutional Boardroom, Administration Unit.</p>
+            </div>
+
+            <!-- Tender 2 -->
+            <div class="tender-card blue-edge">
+                <span class="tag">Annual Framework Prequalification</span>
+                <h3 style="margin: 10px 0 5px 0; color: var(--primary-blue);">Supply & Delivery of Curricular Materials, Foodstuff & Games Ware</h3>
+                <p style="font-size: 0.95rem; color: #444;"><strong>Tender Code:</strong> IBS/PRE/05/25/26 | Continuous registration for upcoming Fiscal Year cycles.</p>
+            </div>
+
+            <!-- Regulatory Redirect -->
+            <div class="notice-box">
+                <div style="flex: 1; min-width: 280px;">
+                    <strong>Filing Instructions:</strong> Complete standard Bills of Quantities (BOQs) must be cleanly packaged in plain, wax-sealed envelopes, explicitly inscribed with the Tender Number, and placed directly inside the main Registry Tender Box. Blank application blueprints are free for download via the national portal.
+                </div>
+                <a href="https://www.tenders.go.ke" target="_blank" class="portal-btn">Go to Official PPIP Portal →</a>
+            </div>
+        </section>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Ikuu Boys' High School.</p>
+        <p>&copy; 2026 Ikuu Boys' High School. All Rights Reserved.</p>
     </footer>
 
 </body>
