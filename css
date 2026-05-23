@@ -199,3 +199,28 @@ footer {
     font-size: 0.9rem;
     border-top: 3px solid var(--accent-gold);
 }
+/* Layout helper grids for Admissions */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+@media (max-width: 850px) {
+    .grid-2col { grid-template-columns: 1fr; }
+}
+
+/* Document download list design */
+.doc-download-list {
+    list-style: none;
+    margin-top: 15px;
+}
+.doc-download-list li {
+    background: #f8fafc;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e2e8f0;
+}
